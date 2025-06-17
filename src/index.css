@@ -4,89 +4,100 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 30% 97%; /* Very light cool gray */
+    --foreground: 220 25% 25%; /* Dark cool gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 25% 25%; /* Dark cool gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 220 25% 25%; /* Dark cool gray */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 65% 48%; /* Deep Blue */
+    --primary-foreground: 210 100% 98%; /* Almost White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 25% 92%; /* Light muted blue-gray */
+    --secondary-foreground: 220 40% 40%; /* Medium-Dark cool gray */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 25% 94%; /* Very light muted blue-gray */
+    --muted-foreground: 220 15% 50%; /* Medium cool gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 170 70% 42%; /* Vibrant Teal */
+    --accent-foreground: 170 100% 98%; /* Almost White on Teal */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%; /* Vibrant Red */
+    --destructive-foreground: 0 100% 98%; /* Almost White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 88%; /* Light Cool Gray Border */
+    --input: 220 20% 88%; /* Light Cool Gray Input Background */
+    --ring: 170 70% 42%; /* Teal - for focus ring, matches accent */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* Softly rounded corners (8px) */
 
-    --sidebar-background: 0 0% 98%;
+    /* Market Indicators */
+    --market-up: 145 60% 40%; /* Green */
+    --market-up-foreground: 145 100% 98%; /* Almost White */
+    --market-down: 0 72% 51%; /* Red (consistent with destructive) */
+    --market-down-foreground: 0 100% 98%; /* Almost White */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Typography */
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Colors - Light Theme */
+    --sidebar-background: 220 25% 95%;
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 220 20% 85%;
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 12%; /* Very Dark Desaturated Blue */
+    --foreground: 220 25% 88%; /* Light Gray-Blue */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 16%; /* Slightly Lighter Dark Desaturated Blue */
+    --card-foreground: 220 25% 88%; /* Light Gray-Blue */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 16%;
+    --popover-foreground: 220 25% 88%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 220 70% 70%; /* Lighter Deep Blue for dark mode */
+    --primary-foreground: 220 25% 15%; /* Very Dark, for contrast */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 28%; /* Dark Muted Blue-Gray */
+    --secondary-foreground: 220 20% 80%; /* Lighter Gray-Blue */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 25%; /* Darker Muted Blue-Gray */
+    --muted-foreground: 220 15% 60%; /* Medium-Light Gray-Blue */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 170 65% 55%; /* Brighter Teal for dark mode */
+    --accent-foreground: 170 25% 15%; /* Very Dark on Teal */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 60%; /* Brighter Red for dark mode */
+    --destructive-foreground: 0 100% 98%; /* Almost White */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 25%; /* Dark Gray-Blue Border */
+    --input: 220 15% 25%; /* Dark Gray-Blue Input Background */
+    --ring: 170 65% 55%; /* Brighter Teal - for focus ring */
+
+    /* Market Indicators (Often same bright colors work on dark, using light mode values) */
+    --market-up: 145 60% 40%;
+    --market-up-foreground: 145 100% 98%;
+    --market-down: 0 72% 51%;
+    --market-down-foreground: 0 100% 98%;
+
+    /* Sidebar Colors - Dark Theme */
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -97,5 +108,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
